@@ -14,7 +14,7 @@ export default function HomeHeroSection() {
           <h1 className="text-4xl font-extrabold">Pepe Taking Over Dogs</h1>
           <p className="">
             The most memeable memecoin in existence. The dogs have had their
-            day, it's time for Pepe to take reign.
+            day, it&apos;s time for Pepe to take reign.
           </p>
         </div>
         <div>
