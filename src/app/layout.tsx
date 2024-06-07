@@ -5,6 +5,7 @@ import "@/globals.css";
 import clsx from "clsx";
 import { IlPepe } from "@/assets";
 import LayoutHeader from "@/components/LayoutHeader";
+import LayoutFooter from "@/components/LayoutFooter";
 
 const inter = Montserrat({ subsets: ["latin"] });
 
@@ -26,16 +27,13 @@ export default function RootLayout({
           "fixed inset-0 flex flex-col overflow-y-scroll"
         )}
       >
-        <div className="z-0 flex-1 flex flex-col space-y-8 pb-64 bg-gradient-to-b from-green-700 overflow-y-scroll md:pb-0">
-          <LayoutHeader />
-          {children}
+        <div className="z-0 flex-1 flex flex-col space-y-32 bg-gradient-to-b from-green-700 overflow-y-scroll">
+          <div className="flex-1 flex flex-col space-y-8">
+            <LayoutHeader />
+            {children}
+          </div>
+          <LayoutFooter />
         </div>
-        <IlPepe
-          alt="Pepe Logo"
-          className="-z-10 absolute -left-8 -bottom-10"
-          width={256}
-          style={{ transform: "scaleX(-1)" }}
-        />
       </body>
     </html>
   );
